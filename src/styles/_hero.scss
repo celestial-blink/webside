@@ -1,0 +1,32 @@
+.hero {
+    >img {
+        display: none;
+    }
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            height: 10em;
+            width: 10em;
+            border-radius: 50%;
+        }
+        p {
+            font-weight: 300;
+            max-width: 500px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .hero {
+        @include align-center;
+        >img {
+            display: block;
+        }
+        .main {
+            padding: 0 .5em;
+        }
+    }
+}

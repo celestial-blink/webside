@@ -1,0 +1,58 @@
+*:not(body) {
+    color: inherit;
+    box-sizing: border-box;
+}
+body {
+    background-color: #EEEEEE;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body>* {
+    padding: 0 1em;
+}
+:disabled {
+    cursor: not-allowed;
+}
+button, input[type=button], input[type=submit] {
+    cursor: pointer;
+    border-width: 0;
+    outline: none;
+    padding: .5em;
+    border-radius: 5px;
+    background-color: $color-blue;
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+p {
+    margin: .2em 0;
+    font-weight: 300;
+}
+img {
+    object-fit: cover;
+    object-position: center;
+}
+section {
+    width: 100%;
+    background-color: white;
+    position: relative;
+    box-sizing: border-box;
+    padding: 1em;
+    margin: .3em 0;
+    @include align-center;
+    >img {
+        height: 15em;
+    }
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 1em 4em;
+    }
+}

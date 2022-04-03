@@ -1,0 +1,69 @@
+.skills {
+    >img {
+        display: none;
+    }
+    h2 {
+        width: 100%;
+        margin: 0 .5em;
+    }
+    .main {
+        @include align-center;
+        width: 100%;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        svg {
+            circle {
+                fill: none;
+                stroke-width: 10;
+                stroke: #000;
+                height: 100%;
+                width: 100%;
+                stroke-dasharray: 283;
+                stroke-dashoffset: 283;
+                &:first-of-type {
+                    stroke-dashoffset: 0;
+                    stroke: lighten($color-gray, 44%);
+                }
+                &:last-of-type {
+                    stroke-dashoffset: calc( 283 - (283 * var(--data-porcent)) / 100);
+                    stroke: $color-gray;
+                }
+            }
+        }
+    }
+    &__skill {
+        position: relative;
+        margin: .5em;
+        text-align: center;
+        span {
+            position: absolute;
+            top: -15%;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            font-size: 1.8em;
+            height: min-content;
+        }
+        p {
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .skills {
+        >img {
+            display: block;
+        }
+        h2 {
+            text-align: center;
+        }
+        .main {
+            justify-content: center;
+            padding: 0 .5em;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "paths": {
+            "@config": ["./src/config"],
+            "@images": ["./src/images"],
+            "@views": ["./src/views"],
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

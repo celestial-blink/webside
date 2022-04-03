@@ -1,0 +1,43 @@
+.projects {
+    h2 {
+        width: 100%;
+        margin: 0 .5em;
+    }
+    .main {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @include align-center;
+        text-align: center;
+    }
+    &__project {
+        position: relative;
+        margin: .5em;
+        text-align: left;
+        width: 142px;
+        padding: .5em;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+        img {
+            border-radius: 5px 5px 0 0;
+            width: 100%;
+        }
+        p {
+            font-size: .9em;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .projects {
+        &__project {
+            width:200px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .main {
+            justify-content: center;
+        }
+    }
+}

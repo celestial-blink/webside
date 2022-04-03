@@ -1,0 +1,27 @@
+.about {
+    >img {
+        display: none;
+    }
+    .main {
+        text-align: left;
+    }
+}
+@media (min-width: 768px) {
+    .about {
+        >img {
+            display: block;
+        }
+        .main {
+            @include align-center;
+            flex-direction: column;
+            padding: 0 .5em;
+            button {
+                margin-top: 1em;
+            }
+            p {
+                text-align: center;
+                max-width: 500px;
+            }
+        }
+    }
+}
